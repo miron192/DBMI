@@ -25,26 +25,26 @@ export default async function page({ params, searchParams }: any) {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-6 bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+    <div className="w-full max-w-5xl mx-auto px-0 sm:px-6">
+      <div className="flex flex-col md:flex-row gap-6 bg-gray-900/80 backdrop-blur-md shadow-xl border border-white/20 rounded-xl p-4 sm:p-6">
         <div className="w-full md:w-1/3">
           <Image
             src={
               movie.poster_path
-                ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
+                ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
                 : "/noPoster.png"
             }
             alt="movie"
-            width={500}
-            height={750}
+            width={300}
+            height={450}
             className="rounded-lg w-full object-cover"
           />
         </div>
 
-        <div className="flex-1 text-white space-y-4 self-center p-6">
-          <div className="py-6 flex justify-between">
+        <div className="flex-1 text-white space-y-4">
+          <div className="flex flex-col sm:flex-row justify-between gap-4">
             <div className="flex flex-col gap-3">
-              <h1 className="text-3xl font-bold">
+              <h1 className="text-2xl sm:text-3xl font-bold">
                 {movie.name || movie.title}
               </h1>
               <p className="text-sm text-gray-400 italic">{movie.tagline}</p>
@@ -59,8 +59,9 @@ export default async function page({ params, searchParams }: any) {
                 ))}
               </div>
             </div>
+
             {session && (
-              <div className="px-12">
+              <div className="self-start sm:self-center sm:px-4">
                 <Rate
                   movieId={movie.id}
                   movieTitle={movie.title}
@@ -72,7 +73,7 @@ export default async function page({ params, searchParams }: any) {
 
           <p className="text-base">{movie.overview}</p>
 
-          <div className="grid grid-cols-2 gap-4 text-sm text-gray-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300">
             <div>
               <strong>Release Date:</strong> {movie.release_date}
             </div>

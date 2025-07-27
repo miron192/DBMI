@@ -33,7 +33,10 @@ export default async function MyRatingsPage() {
       >
         <CarouselContent>
           {ratings.map((rating) => (
-            <CarouselItem key={rating.id} className="basis-1/8 max-w-42 h-72">
+            <CarouselItem
+              key={rating.id}
+              className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 max-w-[140px] h-64"
+            >
               <MovieCard
                 poster_path={
                   rating.movie.posterPath

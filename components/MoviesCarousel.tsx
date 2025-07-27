@@ -25,7 +25,10 @@ const MoviesCarousel = ({
     >
       <CarouselContent>
         {movies.map((movie: MovieItem) => (
-          <CarouselItem key={movie.id} className="basis-1/8 max-w-42 h-72">
+          <CarouselItem
+            key={movie.id}
+            className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 max-w-[140px] h-64"
+          >
             <MovieCard
               id={movie.id}
               title={movie.title}
