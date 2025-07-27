@@ -8,10 +8,10 @@ import MovieItem from "@/lib/Interfaces";
 import MoviesCarousel from "@/components/MoviesCarousel";
 
 const Movie = async () => {
-  let movies: MovieItem[] = await GetLatestMovies();
-  let shows: MovieItem[] = await GetLatestShows();
-  let popularShows: MovieItem[] = await GetPopularShows();
-  let popularMovies: MovieItem[] = await GetPopularMovies();
+  const movies: MovieItem[] = await GetLatestMovies();
+  const shows: MovieItem[] = await GetLatestShows();
+  const popularShows: MovieItem[] = await GetPopularShows();
+  const popularMovies: MovieItem[] = await GetPopularMovies();
 
   return (
     <div className="">

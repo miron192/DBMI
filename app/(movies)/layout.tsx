@@ -6,7 +6,7 @@ export const metadata = {
   description: "I am using Mantine with Next.js!",
 };
 
-export default async function HeaderLayout({ children }: { children: any }) {
+export default function HeaderLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
