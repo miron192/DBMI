@@ -2,11 +2,15 @@ import "../globals.css";
 import Header from "@/components/Header";
 import { Providers } from "@/components/Providers";
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "DBMI",
+  description: "MOVIE WEB APP",
 };
 
-export default function HeaderLayout({ children }: { children: React.ReactNode }) {
+export default function HeaderLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Header />

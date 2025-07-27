@@ -2,8 +2,8 @@ import React from "react";
 
 import "./globals.css";
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "DBMI",
+  description: "MOVIE WEB APP",
 };
 
 export default function RootLayout({
