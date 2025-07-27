@@ -32,7 +32,7 @@ const SearchBar = () => {
       />
       <button
         onClick={handleSearch}
-        className="px-4 py-2 bg-gradient-to-r from-indigo-600 via-violet-700 to-pink-500 text-white font-bold rounded-lg shadow-lg hover:scale-105 active:scale-95 transition-all text-base"
+        className="px-4 py-2 bg-gradient-to-r from-indigo-600 cursor-pointer via-violet-700 to-pink-500 text-white font-bold rounded-lg shadow-lg hover:scale-105 active:scale-95 transition-all text-base"
       >
         <IoMdSearch />
       </button>
