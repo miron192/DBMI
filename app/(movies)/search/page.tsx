@@ -2,12 +2,7 @@ import MoviesCarousel from "@/components/MoviesCarousel";
 import { SearchMovies, SearchShows } from "@/lib/utils";
 import { notFound } from "next/navigation";
 
-interface Params {
-  searchParams: {
-    [key: string]: string | string[] | undefined;
-  };
-}
-const SearchPage = async ({ searchParams }: Params) => {
+const SearchPage = async ({ searchParams }: any) => {
   const query = Array.isArray(searchParams.query)
     ? searchParams.query[0]
     : searchParams.query || " ";

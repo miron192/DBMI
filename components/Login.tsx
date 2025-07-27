@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import LogoutButton from "./LogoutButton";
 import Image from "next/image";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/authOptions";
 
 const Login = async () => {
   const session = await getServerSession(authOptions);

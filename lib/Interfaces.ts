@@ -1,5 +1,3 @@
-// next-auth.d.ts
-import NextAuth from "next-auth";
 export default interface MovieItem {
   id: string;
   title: string;

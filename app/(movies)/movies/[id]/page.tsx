@@ -1,19 +1,20 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Rate from "@/components/Rate";
+import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default async function Page({
-  params,
-  searchParams,
-}: {
-  params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  const { id } = params;
+export async function generateMetadata({ params }: any) {
+  return {
+    title: `Movie ${params.id}`,
+  };
+}
+
+export default async function page({ params, searchParams }: any) {
+  const id = params.id;
   const querytype = searchParams?.querytype;
+
   const res = await fetch(
     `https://api.themoviedb.org/3/${querytype}/${id}?api_key=${process.env.TMDB_API_KEY}`
   );
